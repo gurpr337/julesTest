@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarcastic Poem Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Sarcastic Poem Generator</h1>
+
+    <div>
+        <label for="topic">Topic:</label>
+        <input type="text" id="topic" name="topic" value="cats">
+    </div>
+
+    <div>
+        <label for="poemType">Poem Type:</label>
+        <select id="poemType" name="poemType">
+            <option value="limerick">Limerick</option>
+            <option value="haiku">Haiku</option>
+        </select>
+    </div>
+
+    <button id="generateBtn">Generate Poem</button>
+
+    <h2>Generated Poem:</h2>
+    <div id="poemOutput" style="white-space: pre-wrap; border: 1px solid #ccc; padding: 10px; min-height: 50px;">
+        <!-- Poem will be displayed here -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
