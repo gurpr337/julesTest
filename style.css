@@ -1,25 +1,35 @@
 body {
-    font-family: Consolas, 'Courier New', monospace; /* Monospace font */
-    margin: 20px;
-    background-color: #000000; /* Black background */
-    color: #FFFF00; /* Yellow text */
+    font-family: Consolas, 'Courier New', monospace;
+    margin: 20px; /* This margin will be outside the main-container */
+    background-color: #000000;
+    color: #FFFF00;
+}
+
+.main-container {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    border: 2px solid #3399FF; /* Pac-Man blue border for the container */
+    border-radius: 0;
 }
 
 h1 {
     text-align: center;
-    color: #FFFF00; /* Yellow heading */
-    border-bottom: 2px solid #3399FF; /* Blue underline for accent */
+    color: #FFFF00;
+    border-bottom: 2px solid #3399FF;
     padding-bottom: 10px;
 }
 
 h2 {
     margin-top: 30px;
-    color: #FFFF00; /* Yellow heading */
+    color: #FFFF00;
     border-bottom: 1px solid #3399FF;
     padding-bottom: 5px;
 }
 
-div {
+/* Scoped generic div styling to direct children of main-container */
+.main-container > div {
     margin-bottom: 15px;
 }
 
@@ -27,59 +37,57 @@ label {
     display: inline-block;
     width: 100px;
     margin-right: 10px;
-    color: #FFFF00; /* Yellow label text */
+    color: #FFFF00;
 }
 
 input[type="text"], select {
     padding: 8px;
-    background-color: #333333; /* Dark grey background */
-    color: #FFFF00; /* Yellow text */
-    border: 2px solid #FFFF00; /* Solid yellow border */
-    border-radius: 0; /* Sharp corners */
-    width: 220px; /* Adjusted width slightly */
-    font-family: inherit; /* Inherit monospace font */
+    background-color: #333333;
+    color: #FFFF00;
+    border: 2px solid #FFFF00;
+    border-radius: 0;
+    width: 220px;
+    font-family: inherit;
 }
 
-/* Style for the dropdown arrow in select, very basic, browser dependent */
 select {
-    appearance: none; /* Basic override */
+    appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
     background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M5%208%20l5%205%20l5-5z%22%20fill%3D%22%23FFFF00%22%2F%3E%3C%2Fsvg%3E');
     background-repeat: no-repeat;
     background-position: right 10px center;
-    padding-right: 30px; /* Make space for arrow */
+    padding-right: 30px;
 }
 
-
 button {
-    padding: 10px 20px; /* Slightly more padding */
-    background-color: #3399FF; /* Pac-Man blue */
-    color: #FFFF00; /* Yellow text */
-    border: 2px solid #FFFF00; /* Solid yellow border */
-    border-radius: 0; /* Sharp corners */
+    padding: 10px 20px;
+    background-color: #3399FF;
+    color: #FFFF00;
+    border: 2px solid #FFFF00;
+    border-radius: 0;
     cursor: pointer;
     display: block;
-    margin: 20px auto;
-    font-family: inherit; /* Inherit monospace font */
-    font-size: 1em; /* Ensure button text is not too small */
-    text-transform: uppercase; /* Optional: classic arcade feel */
+    margin: 20px auto; /* This centers the button within its parent */
+    font-family: inherit;
+    font-size: 1em;
+    text-transform: uppercase;
 }
 
 button:hover {
-    background-color: #FFFF00; /* Yellow background on hover */
-    color: #3399FF; /* Blue text on hover */
-    border-color: #3399FF; /* Blue border on hover */
+    background-color: #FFFF00;
+    color: #3399FF;
+    border-color: #3399FF;
 }
 
 #poemOutput {
-    background-color: #222222; /* Darker grey background */
-    border: 2px solid #3399FF; /* Solid blue border */
+    background-color: #222222;
+    border: 2px solid #3399FF;
     padding: 15px;
     min-height: 100px;
-    border-radius: 0; /* Sharp corners */
+    border-radius: 0;
     white-space: pre-wrap;
-    color: #FFFF00; /* Yellow text */
-    line-height: 1.5; /* Improve readability */
-    margin-top: 10px; /* Ensure spacing from "Generated Poem:" h2 */
+    color: #FFFF00;
+    line-height: 1.5;
+    margin-top: 10px;
 }
