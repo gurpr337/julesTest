@@ -1,13 +1,22 @@
 body {
-    font-family: sans-serif;
+    font-family: Consolas, 'Courier New', monospace; /* Monospace font */
     margin: 20px;
-    background-color: #f0f0f0;
-    color: #333;
+    background-color: #000000; /* Black background */
+    color: #FFFF00; /* Yellow text */
 }
 
 h1 {
     text-align: center;
-    color: #555;
+    color: #FFFF00; /* Yellow heading */
+    border-bottom: 2px solid #3399FF; /* Blue underline for accent */
+    padding-bottom: 10px;
+}
+
+h2 {
+    margin-top: 30px;
+    color: #FFFF00; /* Yellow heading */
+    border-bottom: 1px solid #3399FF;
+    padding-bottom: 5px;
 }
 
 div {
@@ -18,40 +27,59 @@ label {
     display: inline-block;
     width: 100px;
     margin-right: 10px;
+    color: #FFFF00; /* Yellow label text */
 }
 
 input[type="text"], select {
     padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 200px;
+    background-color: #333333; /* Dark grey background */
+    color: #FFFF00; /* Yellow text */
+    border: 2px solid #FFFF00; /* Solid yellow border */
+    border-radius: 0; /* Sharp corners */
+    width: 220px; /* Adjusted width slightly */
+    font-family: inherit; /* Inherit monospace font */
 }
 
+/* Style for the dropdown arrow in select, very basic, browser dependent */
+select {
+    appearance: none; /* Basic override */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M5%208%20l5%205%20l5-5z%22%20fill%3D%22%23FFFF00%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    padding-right: 30px; /* Make space for arrow */
+}
+
+
 button {
-    padding: 10px 15px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
+    padding: 10px 20px; /* Slightly more padding */
+    background-color: #3399FF; /* Pac-Man blue */
+    color: #FFFF00; /* Yellow text */
+    border: 2px solid #FFFF00; /* Solid yellow border */
+    border-radius: 0; /* Sharp corners */
     cursor: pointer;
     display: block;
     margin: 20px auto;
+    font-family: inherit; /* Inherit monospace font */
+    font-size: 1em; /* Ensure button text is not too small */
+    text-transform: uppercase; /* Optional: classic arcade feel */
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #FFFF00; /* Yellow background on hover */
+    color: #3399FF; /* Blue text on hover */
+    border-color: #3399FF; /* Blue border on hover */
 }
 
 #poemOutput {
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: #222222; /* Darker grey background */
+    border: 2px solid #3399FF; /* Solid blue border */
     padding: 15px;
     min-height: 100px;
-    border-radius: 4px;
-    white-space: pre-wrap; /* Ensures line breaks in poems are respected */
-}
-
-h2 {
-    margin-top: 30px;
-    color: #555;
+    border-radius: 0; /* Sharp corners */
+    white-space: pre-wrap;
+    color: #FFFF00; /* Yellow text */
+    line-height: 1.5; /* Improve readability */
+    margin-top: 10px; /* Ensure spacing from "Generated Poem:" h2 */
 }
